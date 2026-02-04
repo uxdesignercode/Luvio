@@ -187,6 +187,16 @@ span.new-price {
   margin: 0;
   color: #e3252f;
 }
+.hero-title .new-price
+ {
+    font-size: 4rem;
+    color: #a9071d;
+    position: relative;
+    overflow: hidden;
+}
+.hero-title .hero-tagline {
+    font-size: 1.6rem;
+}
 
 .h-2 {
   font-family: 'Quentin', sans-serif;
@@ -231,7 +241,7 @@ span.new-price {
 
 .hero-title {
   font-family: 'Quentin', sans-serif;
-  font-size: clamp(40px, 4vw, 80px);
+  font-size: clamp(40px, 3vw, 80px);
   font-weight: 900;
   line-height: 1.2;
   color: #e3253f;
