@@ -1135,7 +1135,7 @@ span.new-price {
 }
 .hypno-bg {
   position: absolute;
-  inset: -25%;              /* 🔥 Oversize image */
+  inset: -25%;              /* ðŸ”¥ Oversize image */
   width: auto;
   height: auto;
   min-width: 150%;
@@ -1448,57 +1448,95 @@ span.new-price {
   font-size: 22px;
   cursor: pointer;
 }
-.modal-body h2 { font-family: 'Quentin', sans-serif; color:#e3252f; margin-bottom:0.5rem; }
+.modal-body h2 {font-family: 'Quentin', sans-serif;color:#e3252f;margin-bottom:0.5rem;text-align: center;}
 .modal-body p { color:#333; margin-bottom:1rem; }
-.modal-actions { display:flex; gap:0.75rem; justify-content:flex-end; margin-top:1rem; }
+.modal-actions {display:flex;gap:0.75rem;justify-content: space-around;margin-top:1rem;flex-direction: row;align-content: flex-end;text-align: right;}
 .modal-btn {
   background:#e3252f; color:#fff; border:none; padding:0.6rem 1rem; border-radius:8px; cursor:pointer; font-weight:700;
 }
 .how-steps { margin-left:1rem; color:#333; }
 
+.qr-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 0 0.75rem;
+}
+
+.qr-image {
+  width: min(260px, 80vw);
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  background: #fff;
+  padding: 0.5rem;
+}
+
+.qr-subtitle {
+  text-align: center;
+}
+
 /* Form styles */
 .form-group {
-  display: flex;
-  flex-direction: column;
+  display: grid;
   gap: 1rem;
 }
 
 .form-field {
-  display: flex;
-  flex-direction: column;
-  gap: 0.4rem;
+  display: grid;
+  gap: 0.45rem;
+  text-align: left;
 }
 
 .form-field label {
   font-weight: 600;
   color: #333;
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  font-size: clamp(0.9rem, 1.5vw, 1rem);
 }
 
 .form-field input,
 .form-field select {
-  padding: clamp(0.6rem, 1.5vw, 0.75rem);
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  font-size: clamp(0.875rem, 1.5vw, 1rem);
+  padding: 0.75rem 0.9rem;
+  border: 1px solid #e3e3e3;
+  border-radius: 10px;
+  font-size: clamp(0.9rem, 1.6vw, 1rem);
   font-family: inherit;
-  transition: border-color 200ms ease, box-shadow 200ms ease;
+  background: #fff;
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 120ms ease;
 }
 
 .form-field input:focus,
 .form-field select:focus {
   outline: none;
   border-color: #e3252f;
-  box-shadow: 0 0 0 3px rgba(227, 37, 63, 0.1);
+  box-shadow: 0 0 0 4px rgba(227, 37, 63, 0.12);
 }
 
 .form-field input::placeholder {
-  color: #999;
+  color: #9a9a9a;
+}
+
+.modal-actions {
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.modal-btn {
+  min-width: 120px;
 }
 
 .modal-submit {
-  align-self: flex-end;
-  min-width: 120px;
+  align-self: center;
+}
+
+@media (max-width: 520px) {
+  .modal-actions {
+    justify-content: center;
+  }
+
+  .modal-btn {
+    width: 100%;
+  }
 }
 
 .success-content {
@@ -1630,7 +1668,10 @@ span.new-price {
   opacity: 0.9;
   margin: 0;
 }
-
+button.modal-btn.modal-back {
+    background-color: #ccc;
+    pointer-events: bounding-box;
+}
 @media (max-width: 768px) {
   .footer {
     padding: 2rem 1rem;

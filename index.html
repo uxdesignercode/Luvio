@@ -158,45 +158,45 @@
 		<div class="modal-dialog" role="dialog" aria-modal="true" tabindex="-1">
 			<button class="modal-close" aria-label="Close">×</button>
 			<div class="modal-body">
-				<div class="modal-step" data-step="intro">
-					<h2 id="modalTitle">Get Instant Offer</h2>
-        <form id="offerForm" class="form-group">
-          <div class="form-field">
-            <label for="userName">Full Name *</label>
-            <input type="text" id="userName" name="name" placeholder="Enter your name" required>
-          </div>
-          <div class="form-field">
-            <label for="userNumber">Phone Number *</label>
-            <input type="tel" id="userNumber" name="number" placeholder="Enter your phone number" required>
-          </div>
-          <div class="form-field">
-            <label for="userEmail">Email *</label>
-            <input type="email" id="userEmail" name="email" placeholder="Enter your email" required>
-          </div>
-          <div class="form-field">
-            <label for="paymentMethod">Payment Method *</label>
-            <select id="paymentMethod" name="paymentMethod" required>
-              <option value="">-- Select Payment Method --</option>
-              <option value="mail">Send Link via Email</option>
-              <option value="whatsapp">Send Link via WhatsApp</option>
-            </select>
-          </div>
-          <div class="modal-actions">
-            <button type="submit" class="modal-btn modal-submit">Submit</button>
-          </div>
-        </form>
+				<div class="modal-step" data-step="qr">
+					<h2 id="modalTitle">Scan to Pay</h2>
+					<p class="qr-subtitle">Scan the QR code to complete your payment, then continue.</p>
+					<div class="qr-wrapper">
+						<img src="./img/QR_Code.png" alt="QR Code" class="qr-image">
+					</div>
+					<div class="modal-actions">
+						<button class="modal-btn modal-next" type="button">I have paid</button>
+					</div>
 				</div>
 
-				<div class="modal-step" data-step="how" hidden>
-					<h2>How It Works</h2>
-					<ol class="how-steps">
-						<li><strong>Select</strong> — Choose an offer and customize it.</li>
-						<li><strong>Pay</strong> — Complete payment securely.</li>
-						<li><strong>Share</strong> — Get your admin link and share with your loved one.</li>
-					</ol>
-					<div class="modal-actions">
-						<button class="modal-btn modal-close-btn">Close</button>
-					</div>
+				<div class="modal-step" data-step="form" hidden>
+					<h2>Submit Details</h2>
+					<form id="offerForm" class="form-group">
+						<div class="form-field">
+							<label for="userName">Full Name *</label>
+							<input type="text" id="userName" name="name" placeholder="Enter your name" required>
+						</div>
+						<div class="form-field">
+							<label for="userNumber">Phone Number *</label>
+							<input type="tel" id="userNumber" name="number" placeholder="Enter your phone number" required>
+						</div>
+						<div class="form-field">
+							<label for="userEmail">Email *</label>
+							<input type="email" id="userEmail" name="email" placeholder="Enter your email" required>
+						</div>
+						<div class="form-field">
+							<label for="paymentMethod">Payment Method *</label>
+							<select id="paymentMethod" name="paymentMethod" required>
+								<option value="">-- Select Payment Method --</option>
+								<option value="mail">Send Link via Email</option>
+								<option value="whatsapp">Send Link via WhatsApp</option>
+							</select>
+						</div>
+						<div class="modal-actions">
+							<button class="modal-btn modal-back" type="button">Back</button>
+							<button type="submit" class="modal-btn modal-submit">Submit</button>
+						</div>
+					</form>
 				</div>
 
 				<div class="modal-step" data-step="success" hidden>
